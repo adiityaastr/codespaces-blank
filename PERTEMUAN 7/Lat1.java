@@ -1,33 +1,32 @@
 class Burung {
     String jenis, nama;
     int usia;
+
+    // Constructor with corrected name and parameters
+    Burung(String jenis, String nama, int usia) {
+        this.jenis = jenis;
+        this.nama = nama;
+        this.usia = usia;
+    }
+
+    // Method to display bird information
+    void tampilkanInfo() {
+        System.out.println("Jenis Burung: " + jenis);
+        System.out.println("Nama Burung: " + nama);
+        System.out.println("Usia Burung: " + usia);
+    }
 }
 
-class BurungGagak {
-    String jenis, nama;
-    int usia;
-}
-
-public class Lat1 { // Changed class name to match Java conventions
+public class Lat1 {
     public static void main(String[] args) {
-        Burung burungElang = new Burung(); // Changed variable name to camelCase
-        burungElang.jenis = "Elang Jawa";
-        burungElang.nama = "Coklat";
-        burungElang.usia = 5;
-
-        Burung BurungGagak = new Burung(); // Changed variable name to camelCase
-        BurungGagak.jenis = "Gagak Hitam";
-        BurungGagak.nama = "Hitam";
-        BurungGagak.usia = 3;
         
-        System.out.println("=====================================");
-        System.out.println("Jenis Burung: " + BurungGagak.jenis);
-        System.out.println("Nama Burung: " + BurungGagak.nama);
-        System.out.println("Usia Burung: " + BurungGagak.usia);
-        System.out.println("=====================================");
+        // Create a Burung object
+        new Burung("Elang Jawa", "Coklat", 5);
 
-        System.out.println("Jenis Burung: " + burungElang.jenis);
-        System.out.println("Nama Burung: " + burungElang.nama);
-        System.out.println("Usia Burung: " + burungElang.usia);
+        // Display bird information 5 times
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Burung ke-" + (i + 1));
+            burung.tampilkanInfo();
+        }
     }
 }
